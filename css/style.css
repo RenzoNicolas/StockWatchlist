@@ -1,0 +1,18 @@
+.autocomplete-suggestions { border: 1px solid #999; background: #fff; cursor: default; overflow: auto; }
+.autocomplete-suggestion { padding: 5px 5px; font-size: 1.0em; white-space: nowrap; overflow: hidden; }
+.autocomplete-selected { background: #B8DBFF; }
+.autocomplete-suggestions strong { font-weight: normal; color: #3399ff; }
+
+
+/*  Define the background color for all the ODD background rows  */
+ .table1 tr:nth-child(even){ background: #FFFFFF;} 
+/*  Define the background color for all the EVEN background rows  */
+ .table1 tr:nth-child(2n + 3){background: #A8C6FA;} 
+
+table, th, td {
+    border: 1px solid black; 
+}
+p {  margin-top: 0.3em; margin-bottom: 0.3em; }
+.AddRow, .DeleteRow, .Autocomplete {
+    cursor: pointer;
+	}
