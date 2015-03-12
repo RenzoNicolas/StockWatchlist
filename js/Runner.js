@@ -57,6 +57,8 @@ Runner.loadData = function loadData(AppData, stockId){
 	return AppData;
 };
 
+ 
+
 /**
  * Clears the ul in a container
  * @param  {String} containerId 
