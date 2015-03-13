@@ -44,7 +44,11 @@ Runner.loadData = function loadData(AppData, stockId){
 	.then(function(data){
 		Runner.createTable(data.response.data.slice(0,20),'price-data')
 
-	}, function(jqXHR){
+		today = data.response.data.slice(0,1)[0][0];
+		yesterday = data.response.data.slice(1,2)[0][0];
+		console.log(today);
+		console.log(yesterday);
+			}, function(jqXHR){
 
 		throw new Error('Failed to load data!',jqXHR);
 	}).then(function(){

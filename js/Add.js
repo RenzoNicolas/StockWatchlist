@@ -1,4 +1,4 @@
-//'use strict';
+'use strict';
 function AddNewRow() {
     var table = document.getElementById("table1");
     var row = table.insertRow(2);
