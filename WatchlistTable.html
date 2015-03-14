@@ -3,8 +3,9 @@
 
 	<head>
   <title>StockWatclistTest</title>
-	
-  <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+  
+	<script src="vendors/stockrender-apprender.1.0.0.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
  
   	<!-- Supplementary Code -->
 		<!-- JS -->
@@ -15,24 +16,27 @@
   
 		<!-- Autocomplete -->
 		<script src="js/EnterStock.js"></script>
-        <script src="vendors/autocomplete/js/jquery.autocomplete.min.js"></script>
-        <script src="vendors/autocomplete/js/currency-autocomplete.js"></script>
+       
 		
 		<!-- Supplementary Code -->
-		<script src="js/drag-drop.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+
+
 		<link rel="stylesheet" type="text/css" media="all" href="css/style.css">
 		<link rel="stylesheet" type="text/css" media="screen" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css" />
 		<script src="js/Add.js"></script>
 		<script src="js/Remove.js"></script>
+		<script src="js/stockTicker"></script>
 	
- 
+  <script src="vendors/autocomplete/js/jquery.autocomplete.min.js"></script>
+        <script src="vendors/autocomplete/js/currency-autocomplete.js"></script>
+		
 	<h1><b><font color="Gray">StockRender WatchList</font></b></h1>
 	</head>
 	
 	<body>
-	<p id="enterStock"><input id="autocomplete" type="text" name="currency" maxlength= "4" size= "4"><span id="stock">Stock Name</span><script> document.getElementById("autocomplete").style.display = "none"; </script>
+	<p id="enterStock"><input id="autocomplete" type="text" name="currency"><span id="stock">Stock Name</span></input></p></th>
+			<script> document.getElementById("autocomplete").style.display = "none"; </script>
+	
 	<table height = "10" width = "300" cellspacing="0" border="0" cellpadding="0" id="table1" class="table1">
     <col width="31%">
     <col width="31%">
