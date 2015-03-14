@@ -1,24 +1,52 @@
 <!DOCTYPE html>
 <html>
 
-  <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-  <script type="text/javascript" src="js/jquery.autocomplete.min.js"></script>
-
 	<head>
-	<title>StockWatclistTest</title>
-  <link rel="stylesheet" type="text/css" media="all" href="css/style.css">
-	<script src="js/Add.js"></script>
-    <script src="js/Remove.js"></script>
-  <h1><b><font color="Gray">StockRender WatchList</font></b></h1>
+  <title>StockWatclistTest</title>
+	
+  <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+ 
+  	<!-- Supplementary Code -->
+		<!-- JS -->
+			<script src="js/WatchlistRunner.js"></script>
+			<script src="js/Watchlistmain.js"></script>
+		<!-- JS -->
+		
+  
+		<!-- Autocomplete -->
+		<script src="js/EnterStock.js"></script>
+        <script src="vendors/autocomplete/js/jquery.autocomplete.min.js"></script>
+        <script src="vendors/autocomplete/js/currency-autocomplete.js"></script>
+		
+		<!-- Supplementary Code -->
+		<script src="js/drag-drop.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+		<link rel="stylesheet" type="text/css" media="all" href="css/style.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css" />
+		<script src="js/Add.js"></script>
+		<script src="js/Remove.js"></script>
+	
+ 
+	<h1><b><font color="Gray">StockRender WatchList</font></b></h1>
 	</head>
+	
 	<body>
+	<p id="enterStock"><input id="autocomplete" type="text" name="currency" maxlength= "4" size= "4"><span id="stock">Stock Name</span><script> document.getElementById("autocomplete").style.display = "none"; </script>
 	<table height = "10" width = "300" cellspacing="0" border="0" cellpadding="0" id="table1" class="table1">
     <col width="31%">
     <col width="31%">
     <col width="31%">
     <col width="7%">
     <tr bgcolor= "#D3D3D3">
-        <th colspan="4"> <p>Stock Watchlist</p></th>
+        <th colspan="4"> 
+				<p>
+					<span class="ion-plus-circled" data-pack="default" onclick ="Maximize();"></span>
+					<span class="ion-minus-circled" data-pack="default" onclick ="Minimize();"></span>
+					<span class="ion-close-circled" data-pack="default" onclick ="Close();"></span>
+					Stock Watchlist	
+					<span class="ion-gear-b" data-pack="default" onclick ="settings();"></span>
+				</p></th>
     </tr>
     <tr>
         <td><p>Stock</p></td>

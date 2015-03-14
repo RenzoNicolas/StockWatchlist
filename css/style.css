@@ -3,6 +3,8 @@
 .autocomplete-selected { background: #B8DBFF; }
 .autocomplete-suggestions strong { font-weight: normal; color: #3399ff; }
 
+.ion-gear-b {float: right; margin-right: 0.7em; cursor: pointer;}
+.ion-plus-circled, .ion-minus-circled, .ion-close-circled {float: left; margin-left: 0.3em; cursor: pointer;}
 
 /*  Define the background color for all the ODD background rows  */
  .table1 tr:nth-child(even){ background: #FFFFFF;} 

@@ -35,7 +35,9 @@ Runner.loadData = function loadData(AppData, stockId){
 		}
 
 	});
-
+	AppData.v1.Tickerlist.GET('json')
+	.then(function(data){
+		console.log(data);
 	//-----------------------------------------
 	// /v1/pricedata
 	//-----------------------------------------
