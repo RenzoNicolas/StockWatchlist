@@ -29,7 +29,7 @@ Runner.loadData = function loadData(AppData, stockId){
 		
 		stockName = input;
 		
-		currentPrice = data.response.data.slice(0,2)[0][1];
+		currentPrice = data.response.data.slice(0,1)[0][1];
 		yesterdayPrice = data.response.data.slice(1,2)[0][1];
 		
 		priceChange = ((currentPrice - yesterdayPrice)/ currentPrice) * 100;

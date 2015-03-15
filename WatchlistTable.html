@@ -2,7 +2,7 @@
 <html>
 
 	<head>
-  <title>StockWatclistTest</title>
+	<title>StockWatclistTest</title>
   
 	<script src="vendors/stockrender-apprender.1.0.0.min.js"></script>
 	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
@@ -13,30 +13,27 @@
 			<script src="js/Watchlistmain.js"></script>
 		<!-- JS -->
 		
-  
-		<!-- Autocomplete -->
-		<script src="js/EnterStock.js"></script>
-       
-		
-		<!-- Supplementary Code -->
-
-
+		<!-- CSS -->
 		<link rel="stylesheet" type="text/css" media="all" href="css/style.css">
 		<link rel="stylesheet" type="text/css" media="screen" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css" />
+		<!-- CSS -->
+		
+		<!-- JS Table Functionality -->
 		<script src="js/Add.js"></script>
 		<script src="js/Remove.js"></script>
-		<script src="js/stockTicker"></script>
-	
+		<script src="js/stockTicker.js"></script>
+		<script src="js/EnterStock.js"></script>
+		<!-- JS Table Functionality -->
+		
+		<!-- Auto-complete -->
 		<script src="vendors/autocomplete/js/jquery.autocomplete.min.js"></script>
         <script src="vendors/autocomplete/js/currency-autocomplete.js"></script>
+		<!-- Auto-complete -->
 		
 	<h1><b><font color="Gray">StockRender WatchList</font></b></h1>
 	</head>
 	
 	<body>
-	<p id="enterStock"><input id="autocomplete" type="text" name="currency"><span id="stock">Stock Name</span></input></p></th>
-			<script> document.getElementById("autocomplete").style.display = "none"; </script>
-	
 	<table height = "10" width = "300" cellspacing="0" border="0" cellpadding="0" id="table1" class="table1">
     <col width="31%">
     <col width="31%">
@@ -45,9 +42,6 @@
     <tr bgcolor= "#D3D3D3">
         <th colspan="4"> 
 				<p>
-					<span class="ion-plus-circled" data-pack="default" onclick ="Maximize();"></span>
-					<span class="ion-minus-circled" data-pack="default" onclick ="Minimize();"></span>
-					<span class="ion-close-circled" data-pack="default" onclick ="Close();"></span>
 					Stock Watchlist	
 					<span class="ion-gear-b" data-pack="default" onclick ="settings();"></span>
 				</p></th>
@@ -58,7 +52,8 @@
         <td colspan="2">% Change</td>
     </tr>
     <tr>
-        <th colspan="4"> <p class="AddRow" onClick = "AddNewRow();">+</p> </th>
+        <th colspan="4"> <p class="AddRow" onClick = "AddNewRow();">+</p> <p id="enterStock"><input id="autocomplete" type="text" name="currency"><span class="stock">Click to enter stock ticker</span></input></p></th>
+			<script> document.getElementById("autocomplete").style.display = "none"; </script></th>
     </tr>
 	</table>
 	</body>
