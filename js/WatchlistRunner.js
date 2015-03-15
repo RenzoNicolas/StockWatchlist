@@ -27,20 +27,17 @@ Runner.loadData = function loadData(AppData, stockId){
 	AppData.v1.pricedata.GET(stockId)
 	.then(function(data){
 		
-		stockName = input;
-		
 		currentPrice = data.response.data.slice(0,1)[0][1];
 		yesterdayPrice = data.response.data.slice(1,2)[0][1];
 		
 		priceChange = ((currentPrice - yesterdayPrice)/ currentPrice) * 100;
-		priceChange = Math.round(change * 100) / 100
+		priceChange = Math.round(priceChange * 100) / 100
 		
 		//Check if data is retrieved.
 			console.log(stockName);
-			console.log(input);
 			console.log(currentPrice);
 			console.log(yesterdayPrice);
-			console.log(change + "%");
+			console.log(priceChange + "%");
 
 	}, function(jqXHR){
 
