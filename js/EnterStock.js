@@ -1,4 +1,5 @@
 //'use strict';
+var stockName; 
 window.onload = function() {
   document.getElementById('enterStock').onclick = function(event) {
     var span, input, text;
@@ -25,9 +26,12 @@ window.onload = function() {
             console.log('Enter was pressed');
               input.style.display = "none";
               console.log('User entered: ', input.value);
-               // Update the span
+              // Update the span
               span.innerHTML = input.value;
               inputStock = input.value;
+			  stockName = input.value;
+			  //Test to see if global variable is defined as input.value
+			  console.log(stockName);
               // Show the span again
               span.style.display = "";
 
@@ -64,4 +68,3 @@ window.onload = function() {
     }
   }
 }
-

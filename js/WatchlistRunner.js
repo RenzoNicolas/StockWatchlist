@@ -38,6 +38,7 @@ Runner.loadData = function loadData(AppData, stockId){
 			console.log(currentPrice);
 			console.log(yesterdayPrice);
 			console.log(priceChange + "%");
+			
 
 	}, function(jqXHR){
 

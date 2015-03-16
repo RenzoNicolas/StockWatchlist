@@ -1,8 +1,9 @@
 'use strict';
 
+
 StockRender.AppRender.register({
 	id: "49e90eee6ce1942a94136fc8db19319c",
-	name: "Tables",
+	name: "StockWatchList",
 	version: "1.0.0",
 	defaults: {
 		terminal: {
@@ -47,10 +48,10 @@ StockRender.AppRender.register({
 			return;
 		});
 
-		$('#stock').keypress(function(e){
+		$('#autocomplete').keypress(function(e){
 			if( e.which === 13 ) {
 				Runner.toggleOverhead();
-				Runner.loadData(AppData, $('#stock')[0].value);
+				Runner.loadData(AppData, $('#autocomplete')[0].value);
 				return;
 			}
 		})
