@@ -10,5 +10,5 @@ function AddNewRow() {
     cell1.innerHTML = " " + stockName;
     cell2.innerHTML = " " + currentPrice;
     cell3.innerHTML = " " + priceChange;
-    cell4.innerHTML = '<span class="ion-close-circled" data-pack="default" onclick= "deleteRow(this)"></span>';
+    cell4.innerHTML = '<span class="ion-minus-circled" data-pack="default" onclick= "deleteRow(this)"></span>';
 }

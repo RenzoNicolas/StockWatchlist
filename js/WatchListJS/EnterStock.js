@@ -1,4 +1,5 @@
-function stockTicker() {
+//'use strict';
+var stockName; 
 window.onload = function() {
   document.getElementById('enterStock').onclick = function(event) {
     var span, input, text;
@@ -25,11 +26,15 @@ window.onload = function() {
             console.log('Enter was pressed');
               input.style.display = "none";
               console.log('User entered: ', input.value);
-               // Update the span
+              // Update the span
               span.innerHTML = input.value;
-              inputStock = input.value;
+			  stockName = input.value;
               // Show the span again
               span.style.display = "";
-
-	<p id="enterStock"><input id="autocomplete" type="text" name="currency" maxlength= "4" size= "4"/><span id="stock">Stock Name</span></input></p> <script> document.getElementById("autocomplete").style.display = "none"; </script>
+            }   
+          }
+        }
+       
+    }
+  }
 }

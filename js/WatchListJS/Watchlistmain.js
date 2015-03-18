@@ -42,12 +42,6 @@ StockRender.AppRender.register({
 		Runner.loadData(AppData,last_input);
 
 		/*Setting click events*/
-		$('#ticker-btn').click(function(){
-			Runner.toggleOverhead();					
-			Runner.loadData(AppData, $('#stock')[0].value);
-			return;
-		});
-
 		$('#autocomplete').keypress(function(e){
 			if( e.which === 13 ) {
 				Runner.toggleOverhead();

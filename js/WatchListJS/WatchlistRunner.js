@@ -13,6 +13,7 @@ function Runner () {}
  *    
  */
  
+ //Variable Declarations
  var stockName;
  var currentPrice;
  var yesterdayPrice;
@@ -24,9 +25,6 @@ Runner.loadData = function loadData(AppData, stockId){
 	
 	AppData.v1.Tickerlist.GET('json')
 	.then(function(data){
-		
-		stockTicker = data
-		console.log(stockTicker)
 		console.log(data);
 	});
 
@@ -43,10 +41,10 @@ Runner.loadData = function loadData(AppData, stockId){
 		priceChange = Math.round(priceChange * 100) / 100
 		
 		//Check if data is retrieved.
-			console.log(stockName);
-			console.log(currentPrice);
-			console.log(yesterdayPrice);
-			console.log(priceChange + "%");
+			console.log("Stock Ticker: " + stockName);
+			console.log("Current Price Value: " + currentPrice);
+			console.log("Yesterday's Price Value: " + yesterdayPrice);
+			console.log("Change in Price: " + priceChange + "%");
 			
 
 	}, function(jqXHR){
