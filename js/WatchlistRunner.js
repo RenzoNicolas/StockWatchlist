@@ -17,9 +17,18 @@ function Runner () {}
  var currentPrice;
  var yesterdayPrice;
  var priceChange;
+ var stockTicker;
  
 Runner.loadData = function loadData(AppData, stockId){
  	var checks = 0;
+	
+	AppData.v1.Tickerlist.GET('json')
+	.then(function(data){
+		
+		stockTicker = data
+		console.log(stockTicker)
+		console.log(data);
+	});
 
 	//-----------------------------------------
 	// /v1/pricedata
