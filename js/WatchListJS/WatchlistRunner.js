@@ -18,7 +18,7 @@ function Runner () {}
  var currentPrice;
  var yesterdayPrice;
  var priceChange;
- var stockTicker;
+ var stockTickers;
  
 Runner.loadData = function loadData(AppData, stockId){
  	var checks = 0;
@@ -26,6 +26,7 @@ Runner.loadData = function loadData(AppData, stockId){
 	AppData.v1.Tickerlist.GET('json')
 	.then(function(data){
 		console.log(data);
+		stockTickers = data
 	});
 
 	//-----------------------------------------
@@ -41,7 +42,7 @@ Runner.loadData = function loadData(AppData, stockId){
 		priceChange = Math.round(priceChange * 100) / 100
 		
 		//Check if data is retrieved.
-			console.log("Stock Ticker: " + stockName);
+			console.log("Stock Ticker (Undefined means default company A is used.): " + stockName);
 			console.log("Current Price Value: " + currentPrice);
 			console.log("Yesterday's Price Value: " + yesterdayPrice);
 			console.log("Change in Price: " + priceChange + "%");
