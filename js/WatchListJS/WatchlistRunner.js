@@ -23,6 +23,7 @@ function Runner () {}
 Runner.loadData = function loadData(AppData, stockId){
  	var checks = 0;
 	
+	//Retrieve stock tickers from database.
 	AppData.v1.Tickerlist.GET('json')
 	.then(function(data){
 		console.log(data);
@@ -38,7 +39,7 @@ Runner.loadData = function loadData(AppData, stockId){
 
 		$(function autocomplete(){
 			
-		  // setup autocomplete function pulling from currencies[] array
+		  // Setup auto-complete function pulling from StockRender data array
 		  $("#autocomplete").autocomplete({
 			lookup: tickers,
 			onSelect: function (suggestion) {

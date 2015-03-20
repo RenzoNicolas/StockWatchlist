@@ -4,7 +4,7 @@
 StockRender.AppRender.register({
 	id: "49e90eee6ce1942a94136fc8db19319c",
 	name: "StockWatchList",
-	version: "1.0.0",
+	version: "4.0.0",
 	defaults: {
 		terminal: {
 			x: 0,
