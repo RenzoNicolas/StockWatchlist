@@ -18,7 +18,7 @@ function Runner () {}
  var currentPrice;
  var yesterdayPrice;
  var priceChange;
- var stockTickers;
+ var i = 0;
  
 Runner.loadData = function loadData(AppData, stockId){
  	var checks = 0;
@@ -26,7 +26,30 @@ Runner.loadData = function loadData(AppData, stockId){
 	AppData.v1.Tickerlist.GET('json')
 	.then(function(data){
 		console.log(data);
-		stockTickers = data
+		console.log(data.response.length);
+		
+		var lenthOfResponse= data.response.length;
+		var tickers= new Array()
+		for(i = 0;i < lenthOfResponse;i++){
+
+        tickers[i]= data.response[i].Ticker
+		}
+
+
+		$(function autocomplete(){
+			
+		  // setup autocomplete function pulling from currencies[] array
+		  $("#autocomplete").autocomplete({
+			lookup: tickers,
+			onSelect: function (suggestion) {
+			  var thehtml = '<strong>Currency Name:</strong> ' + suggestion.value + ' <br> <strong>Symbol:</strong> ' + suggestion.data;
+			  $('#outputcontent').html(thehtml);
+			  $("#autocomplete").focus();
+			}
+		  });
+		  
+
+})
 	});
 
 	//-----------------------------------------
