@@ -27,7 +27,7 @@ Runner.loadData = function loadData(AppData, stockId){
 	AppData.v1.Tickerlist.GET('json')
 	.then(function(data){
 		console.log(data);
-		console.log(data.response.length);
+		console.log("Number of objects: " + data.response.length);
 		
 		var lenthOfResponse= data.response.length;
 		var tickers= new Array()
@@ -39,7 +39,7 @@ Runner.loadData = function loadData(AppData, stockId){
 
 		$(function autocomplete(){
 			
-		  // Setup auto-complete function pulling from StockRender data array
+		  // Set up auto-complete function pulling from StockRender data array
 		  $("#autocomplete").autocomplete({
 			lookup: tickers,
 			onSelect: function (suggestion) {
