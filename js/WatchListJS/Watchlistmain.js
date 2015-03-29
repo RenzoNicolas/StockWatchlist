@@ -18,7 +18,7 @@ StockRender.AppRender.register({
 	},
 	ready: function(AppMemory, AppData) {
 		/*Defining Variables*/
-		var last_input;
+		var last_input, stockname;
 
 		/*Reading User-Data*/
 		AppMemory.read('last_input')

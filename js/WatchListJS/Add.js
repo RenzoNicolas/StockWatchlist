@@ -18,5 +18,4 @@ function AddNewRow() {
     cell3.innerHTML = " " + priceChange;
     cell4.innerHTML = '<p class= "DeleteRow" onclick= "deleteRow(this)">(x)</p>';
 	}
-   
 }

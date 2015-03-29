@@ -24,16 +24,19 @@ window.onload = function() {
         if(input.value.length !== 0){
           if(event.keyCode == 13){
             console.log('Enter was pressed');
-              input.style.display = "none";
-              console.log('User entered: ', input.value);
-              // Update the span
-              span.innerHTML = input.value;
-			  stockName = input.value;
-              // Show the span again
-              span.style.display = "";
+            input.style.display = "none";
+            console.log('User entered: ', input.value);
+            // Update the span
+            span.innerHTML = input.value;
+      		  stockName = input.value;
+            // Show the span again
+            span.style.display = "";
+
+            // Update rows html
+            AddNewRow();
             }   
           }
-        }
+        } 
        
     }
   }
