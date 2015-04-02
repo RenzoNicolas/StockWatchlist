@@ -3,10 +3,10 @@
 
 	<head>
 	<title>StockWatclistApp</title>
- 
-  	<!-- Supplementary Code -->
-	
+		
+		<!-- Framework -->
 		<script src="vendors/stockrender-apprender.1.0.0.min.js"></script>
+		<!-- Framework -->
 		
 		<!-- JS -->
 			<script src="vendors/autocomplete/js/jquery.autocomplete.min.js"></script>
@@ -14,21 +14,22 @@
 			<script src="js/WatchListJS/Watchlistmain.js"></script>
 		<!-- JS -->
 		
-		<!-- CSS -->
-		<link rel="stylesheet" type="text/css" media="all" href="css/style.css">
-		<link rel="stylesheet" type="text/css" media="screen" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css" />
-		<!-- CSS -->
-		
-		<!-- JS Table Functionality -->
-		<script src="js/WatchListJS/EnterStock.js"></script>
-		<script src="js/WatchListJS/Add.js"></script>
-		<script src="js/WatchListJS/Remove.js"></script>
-		<!-- JS Table Functionality -->
+		<!-- Supplementary Code -->
+			<!-- CSS -->
+			<link rel="stylesheet" type="text/css" media="all" href="css/style.css">
+			<link rel="stylesheet" type="text/css" media="screen" href="icons/css/ionicons.min.css" />
+			<!-- CSS -->
+			
+			<!-- JS Table Functionality -->
+			<script src="js/WatchListJS/EnterStock.js"></script>
+			<script src="js/WatchListJS/Remove.js"></script>
+			<!-- JS Table Functionality -->
 		
 	<h1><b><font color="Gray">StockRender WatchList</font></b></h1>
 	</head>
 	
 	<body>
+	<!-- Make Table -->
 	<table height = "10" width = "300" cellspacing="0" border="0" cellpadding="0" id="table1" class="table1">
     <col width="31%">
     <col width="31%">
@@ -47,6 +48,7 @@
         <td colspan="2">% Change</td>
     </tr>
     <tr>
+		<!-- Input box for user input -->
         <th colspan="4"><p id="enterStock"><input id="autocomplete" type="textbox" name="currency"><span class="stock">Click to enter stock ticker</span></input></p></th>
 			<script> document.getElementById("autocomplete").style.display = "none"; </script></th>
     </tr>

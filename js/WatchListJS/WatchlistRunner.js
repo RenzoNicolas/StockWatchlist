@@ -14,11 +14,11 @@ function Runner () {}
  */
  
  //Variable Declarations
- var stockName;
- var currentPrice;
- var yesterdayPrice;
- var priceChange;
- var i = 0;
+ var stockName; //Will contain the ticker name in order to check if user input is retrieved. 
+ var currentPrice; //Will contain the stock's price value today.
+ var yesterdayPrice; //Will contain the stock's price value yesterday.
+ var priceChange; //Will contain the percent change of the price value compared to today and yesterday.
+ var i = 0; //Initializing this variable for the auto-complete function.
  
 Runner.loadData = function loadData(AppData, stockId){
  	var checks = 0;
@@ -70,7 +70,6 @@ Runner.loadData = function loadData(AppData, stockId){
 			console.log("Current Price Value: " + currentPrice);
 			console.log("Yesterday's Price Value: " + yesterdayPrice);
 			console.log("Change in Price: " + priceChange + "%");
-			
 
 	}, function(jqXHR){
 
@@ -83,25 +82,4 @@ Runner.loadData = function loadData(AppData, stockId){
 	});
 
 	return AppData;
-};
-
-/**
- * Toggles the overhead animation
- * @return {Number} old opacity settings
- */
-Runner.toggleOverhead = function toggleOverhead() {
-
-	var op = Math.ceil(parseFloat($('.overhead span').css('opacity')));
-
- 	if( op === 1){
- 		$('.overhead').css({height:0});
- 		$('.overhead div').css({opacity:0});
- 		$('.overhead span').css({opacity:0});
- 	} else if( op === 0 ) {
- 		$('.overhead').css({height:'100%'});
- 		$('.overhead div').css({opacity:1});
- 		$('.overhead span').css({opacity:1});		
- 	}
-
- 	return op;
 };
