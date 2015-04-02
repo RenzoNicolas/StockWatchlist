@@ -50,6 +50,12 @@ window.onload = function() {
 					cell1.innerHTML = " " + stockName;
 					cell2.innerHTML = " " + currentPrice;
 					cell3.innerHTML = " " + priceChange;
+					if (priceChange < 0){
+						cell3.style.color = "red";
+					}
+					if (priceChange > 0) {
+						cell3.style.color = "green";
+					}
 					cell4.innerHTML = '<p class= "DeleteRow" onclick= "deleteRow(this)">(x)</p>';
 					}
 				}, 1900);
