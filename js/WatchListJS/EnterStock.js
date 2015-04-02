@@ -52,7 +52,7 @@ window.onload = function() {
 					cell3.innerHTML = " " + priceChange;
 					cell4.innerHTML = '<p class= "DeleteRow" onclick= "deleteRow(this)">(x)</p>';
 					}
-				}, 1500);
+				}, 1900);
             }   
           }
         } 

@@ -1,3 +1,4 @@
+/*  Styling for the Auto-complete drop down suggestions  */
 .autocomplete-suggestions { border: 1px solid #999; background: #fff; cursor: default; overflow: auto; }
 .autocomplete-suggestion { padding: 5px 5px; font-size: 1.0em; white-space: nowrap; overflow: hidden; }
 .autocomplete-selected { background: #B8DBFF; }

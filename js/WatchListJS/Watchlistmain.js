@@ -44,7 +44,6 @@ StockRender.AppRender.register({
 		/*Setting click events*/
 		$('#autocomplete').keypress(function(e){
 			if( e.which === 13 ) {
-				Runner.toggleOverhead();
 				Runner.loadData(AppData, $('#autocomplete')[0].value);
 				return;
 			}
