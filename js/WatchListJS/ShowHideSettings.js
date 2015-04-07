@@ -1,13 +1,15 @@
-function swap(one, two) {
-    document.getElementById(one).style.display = 'block';
-    document.getElementById(two).style.display = 'none';
+$(document).ready(function(){
+					$("div").hide();
+			});
+function toggle1() {
+	$(document).ready(function(){
+					$("table").hide();
+					$("div").show();
+			});
 }
-
-function settings(){
-	document.getElementById('table1').addEventListener('click',function(e){
-		swap('one','two');
-	});
-	document.getElementById('container').addEventListener('click',function(e){
-		swap('two','one');
-	});
+function toggle2() {
+	$(document).ready(function(){
+					$("div").hide();
+					$("table").show();
+			});
 }

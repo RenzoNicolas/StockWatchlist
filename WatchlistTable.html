@@ -12,6 +12,7 @@
 			<script src="vendors/autocomplete/js/jquery.autocomplete.min.js"></script>
 			<script src="js/WatchListJS/WatchlistRunner.js"></script>
 			<script src="js/WatchListJS/Watchlistmain.js"></script>
+			<script src="js/WatchListJS/ShowHideSettings.js"></script>
 		<!-- JS -->
 		
 		<!-- Supplementary Code -->
@@ -40,7 +41,7 @@
         <th colspan="4"> 
 				<p>
 					Stock Watchlist	
-					<span class="ion-gear-b" data-pack="default" onclick ="settings();"></span>
+					<span class="ion-gear-b" data-pack="default" onClick = "toggle1();"></span>
 				</p></th>
     </tr>
     <tr>
@@ -58,7 +59,7 @@
 	<div class="container" id = "container1">
 		<div class="heading">
 			 <div class="col">Settings</div>
-			 <span class="ion-gear-b" data-pack="default" onclick ="settings();"></span>
+			 <span class="ion-gear-b" data-pack="default" onClick = "toggle2();"></span>
 		</div>
 		<div class="table-row"  style = "height:175px">
 				
@@ -67,7 +68,6 @@
 				
 		</div>
 	</div>
-		
 	</body>
 
 </html>
