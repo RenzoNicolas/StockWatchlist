@@ -46,6 +46,7 @@ function Settings_rowColor () {
 
 	rowColor1 = "#" + document.getElementById('inpColorScheme1').value;
 	rowColor2 = "#" + document.getElementById('inpColorScheme2').value;
+	var rowLength = document.getElementById('table1').rows.length;
 	
 	/*	Change the background color for all the ODD rows	*/
 	for(var x = 2; x < rowLength; x += 2) {
@@ -56,7 +57,7 @@ function Settings_rowColor () {
 		document.getElementById('table1').rows[x].style.background = rowColor2;
 	}
 	document.getElementById('table1').rows[0].style.background = rowColor1;
-	document.getElementById('table1').rows[(rowLength - 1)].style.background = rowColor1;
+	//document.getElementById('table1').rows[(rowLength - 1)].style.background = rowColor1;
 }
 
 function Settings_all () {

@@ -42,14 +42,14 @@ window.onload = function() {
 					var cell4 = row.insertCell(3);
 					
 					if (stockName == null) {
-					cell1.innerHTML = "<em>"+ "[Stock Ticker]" + "</em>";
-					cell2.innerHTML = "<em>"+ "[Price Value]" + "</em>";
-					cell3.innerHTML = "<em>"+ "[Change in Value]" + "</em>";
+					cell1.innerHTML = "[Stock Ticker]";
+					cell2.innerHTML = "[Price Value]";
+					cell3.innerHTML = "[Change in Value]";
 					cell4.innerHTML = '<p class= "DeleteRow" onclick= "deleteRow(this)">(x)</p>';
 					} else {
-					cell1.innerHTML = "<em>"+ stockName + "</em>";
-					cell2.innerHTML = "<em>"+ currentPrice + "</em>";
-					cell3.innerHTML = "<em>"+ priceChange + "</em>";
+					cell1.innerHTML = " " + stockName;
+					cell2.innerHTML = " " + currentPrice;
+					cell3.innerHTML = " " + priceChange;
 					if (priceChange < 0){
 						cell3.style.color = "red";
 					}
@@ -58,6 +58,7 @@ window.onload = function() {
 					}
 					cell4.innerHTML = '<p class= "DeleteRow" onclick= "deleteRow(this)">(x)</p>';
 					}
+					Settings_all();
 				}, 1900);
             }   
           }
