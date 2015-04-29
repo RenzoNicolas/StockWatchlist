@@ -83,3 +83,71 @@ Runner.loadData = function loadData(AppData, stockId){
 
 	return AppData;
 };
+            //This is for changing text size in settings
+             var newTextSize = document.getElementById('inpText').value;
+               var changeSize = '16px';
+         if(newTextSize == 12){
+          changeSize = '12px';
+        }
+        if(newTextSize == 13){
+          changeSize = '13px';
+        }
+        if(newTextSize == 14){
+          changeSize = '14px';
+        }
+        if(newTextSize == 15){
+          changeSize = '15px';
+        }
+        if(newTextSize == 16){
+          changeSize = '16px';
+        }
+        if(newTextSize == 17){
+          changeSize = '17px';
+        }
+        if(newTextSize == 18){
+          changeSize = '18px';
+        }
+        if(newTextSize == 19){
+          changeSize = '19px';
+        }
+        if(newTextSize == 20){
+          changeSize = '20px';
+        }
+
+		//finds which table row set you are changing
+	var colorChangeType;
+	Runner.colorType = function colorType(type){
+	colorChangeType = type;
+};
+//changes the color of the rows
+Runner.colorChange = function colorChange(){
+     var txtcolor;
+  if(colorChangeType == 'text'){
+    txtcolor = document.getElementById('btnTextColor').value;
+    txtcolor = '#' + txtcolor;
+     var pLength = document.getElementsByTagName('p').length;
+      for(var x = 0; x < pLength; x++){
+         document.getElementsByTagName('p')[x].style.color = txtcolor;
+      }
+  }
+   if(colorChangeType == 'scheme1'){
+    txtcolor = document.getElementById('inpColorScheme1').value;
+    txtcolor = '#' + txtcolor;
+    var rowLength = document.getElementById('table1').rows.length;
+    for(var x = 2; x < rowLength; x += 2){
+      document.getElementById('table1').rows[x].style.background = txtcolor;
+    }
+  }
+   if(colorChangeType == 'scheme2'){
+    txtcolor = document.getElementById('inpColorScheme2').value;
+    txtcolor = '#' + txtcolor;
+    var rowLength = document.getElementById('table1').rows.length;
+    for(var x = 1; x < rowLength; x += 2){
+      document.getElementById('table1').rows[x].style.background = txtcolor;
+    }
+  }     
+}
+
+
+
+

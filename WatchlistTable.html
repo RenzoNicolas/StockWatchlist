@@ -9,9 +9,14 @@
 		<!-- Framework -->
 		
 		<!-- JS -->
-			<script src="vendors/autocomplete/js/jquery.autocomplete.min.js"></script>
-			<script src="js/WatchListJS/WatchlistRunner.js"></script>
+       <script src="vendors/jquery-2.1.3.min.js"></script>
+       <script src="vendors/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+       <script src="jscolor-1.4.4/jscolor/jscolor.js"></script>
+
 			<script src="js/WatchListJS/Watchlistmain.js"></script>
+			<script src="js/WatchListJS/WatchlistRunner.js"></script>
+
+			<!--<script src="js/WatchListJS/ShowHideSettings.js"></script> -->
 		<!-- JS -->
 		
 		<!-- Supplementary Code -->
@@ -27,6 +32,8 @@
 			<!-- JS Table Functionality -->
 		
 	<h1><b><font color="Gray">StockRender WatchList</font></b></h1>
+
+		<script src="vendors/autocomplete/js/jquery.autocomplete.min.js"></script>
 	</head>
 	
 	<body>
@@ -40,7 +47,7 @@
         <th colspan="4"> 
 				<p>
 					Stock Watchlist	
-					<span class="ion-gear-b" data-pack="default" onclick ="settings();"></span>
+					<span class="ion-gear-b" data-pack="default" id="opener"></span>
 				</p></th>
     </tr>
     <tr>
@@ -58,16 +65,57 @@
 	<div class="container" id = "container1">
 		<div class="heading">
 			 <div class="col">Settings</div>
-			 <span class="ion-gear-b" data-pack="default" onclick ="settings();"></span>
+			 <span class="ion-gear-b" data-pack="default" id="closer"></span>
 		</div>
 		<div class="table-row"  style = "height:175px">
 				
 				
-				<div id= "chart"></div>
+				<div id= "chart">
+					 <div id="settings" title="Settings">
+    <script>  $("#settings").hide(); </script>
+
+      <label id = "lblAddStocks">Add Stocks by: </label>
+      <label id = "lblText">Text Size: </label>
+      <label id = "lblColor">Color Scheme: </label>
+      <label id = "lblTextColor">Text Color: </label>
+      <input id = "btnTextColor" class="color" value="000000"></input>
+      <input id = "inpColorScheme1" class="color" value="A8C6FA"></input>
+      <input id = "inpColorScheme2" class="color" value="FFFFFF"></input>
+
+
+      <input id = "inpText" type="number" min="12" max="20" step="1" value="16">
+
+      <select id="fundimental">
+          <option selected = "selected">floatshares</option>
+          <option>liability</option>
+          <option>totaloperatingexpense</option>
+          <option>netincome</option>
+          <option>longtermdebt</option>
+          <option>revenue</option>
+          <option>numofemployees</option>
+          <option>assets</option>
+          <option>equity</option>
+          <option>shorttermdebt</option>
+          <option>epsbase</option>
+          <option>cash</option>
+          <option>goodwill</option>
+          <option>epsdiluted</option>
+          <option>dps</option>
+          <!--<option>operatingcashflow</option>  temporarily disabled, no fundimental data-->
+          <option>institutionalown</option>
+          <option>inventory</option>
+          <option>incomeaftertax</option>
+          <option>incomebeforetax</option>
+          <option>capitalexpenditures</option>
+          <option>costofgoodssold</option>
+          <option>operatingincome</option>
+          <option>bookvalue</option>
+      </select> 
+  </div>
+				</div>
 				
 		</div>
 	</div>
-		
 	</body>
 
 </html>

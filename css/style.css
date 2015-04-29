@@ -22,3 +22,84 @@ p {  margin-top: 0.3em; margin-bottom: 0.3em; }
 .stock:hover {
 	cursor: pointer;
 }
+
+// for settings add on
+
+#settings {
+  border: 1px solid black;
+  height: 125px;
+  width: 350px;
+  position: static;
+  top: 105px;
+  left: 70px;
+}
+#lblAddStocks {
+  position: static;
+  top: 92px;
+  left: 30px;
+  height: 20px;
+  width: 100px;
+}
+#lblAddStocks {
+  position: static;
+  top: 92px;
+  left: 30px;
+  height: 20px;
+  width: 100px;
+}
+#lblText {
+  position: static;
+  top: 10px;
+  left: 30px;
+  height: 20px;
+  width: 100px;
+}
+#inpText {
+  position: static;
+  top: 8px;
+  left: 95px;
+  height: 20px;
+  width: 40px;
+}
+#fundimental {
+  position: static;
+  top: 90px;
+  left: 130px;
+  height: 27px;
+  width: 100px;
+}
+#lblTextColor {
+  position: static;
+  top: 10px;
+  left: 180px;
+  height: 20px;
+  width: 100px;
+}
+#btnTextColor {
+  position: static;
+  top: 10px;
+  left: 260px;
+  height: 20px;
+  width: 50px;
+}
+#inpColorScheme1 {
+  position: static;
+  top: 50px;
+  left: 140px;
+  height: 20px;
+  width: 50px;
+}
+#inpColorScheme2 {
+  position: static;
+  top: 50px;
+  left: 210px;
+  height: 20px;
+  width: 50px;
+}
+#lblColor {
+  position: static;
+  top: 100px;
+  left: 30px;
+  height: 20px;
+  width: 100px;
+}
